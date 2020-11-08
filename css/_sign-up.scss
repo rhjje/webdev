@@ -1,0 +1,54 @@
+$white: #FFFFFF;
+$button: #00AFDB;
+$button-hover: #009CC2;
+
+@mixin h2-sign-up {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.4rem;
+    line-height: 2.81rem;
+    letter-spacing: 0.1rem; 
+    color: $white; 
+    text-transform: uppercase;
+}
+
+.sign-up .wrapper {
+    height: 524px;
+    background: url('../assets/images/download.png') 50% 50% no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up__heading {
+    @include h2-sign-up;
+}
+
+.subscribe-form {
+    display: flex;
+    margin-top: 30px;
+}
+
+.sign-up__input {
+    padding-left: 25px;
+    width: 320px;
+    height: 45px;
+    font-size: 1.4rem;
+    outline: none;
+}
+
+.subscribe {
+    width: 65px;
+    height: 47px;
+    margin-left: -1px;
+    margin-top: 1px;
+    border: none;
+    outline: none; 
+    background: url('../assets/icons/check-icon.svg') $button 50% 50% no-repeat;
+    &:hover {
+        background-color: $button-hover;
+        cursor: pointer;
+    }
+}

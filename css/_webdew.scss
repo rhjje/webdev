@@ -1,0 +1,84 @@
+$white: #FFFFFF;
+$button: #00AFDB;
+$button-hover: #009CC2;
+
+@mixin webdev-heading {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 6.4rem;
+    line-height: 7.5rem;
+    letter-spacing: 0.45rem; 
+    color: $white;   
+}
+
+@mixin webdev-text {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.8rem;
+    line-height: 2.52rem;
+    color: $white;
+}
+
+@mixin button {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.4rem;
+    line-height: 1.64rem;
+    color: $white;
+}
+
+.webdev {
+    background-color: black;
+}
+
+.webdev .wrapper {
+    max-width: 1600px;
+    height: 744px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: url('../assets/images/webdev-bg.png') 50% 50% no-repeat;
+}
+
+.webdev__heading {
+    @include webdev-heading;
+    text-transform: uppercase;
+    margin-top: 230px;
+}
+
+.webdev__content {
+    @include webdev-text;
+    width: 500px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.colored {
+    background-color: $button;
+    border: none;
+    outline: none;
+    width: 184px;
+    height: 46px;
+    @include button;
+    text-transform: uppercase;
+    margin-top: 30px;
+    &:hover {
+        cursor: pointer;
+        background-color: $button-hover;
+    } 
+}
+
+.social-media {
+    display: flex;
+    justify-content: space-between;
+    width: 170px;
+    margin-top: 185px;
+    .social-media__item {
+        img {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    } 
+}

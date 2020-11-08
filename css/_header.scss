@@ -1,0 +1,44 @@
+$white: #FFFFFF;
+
+@mixin header {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4rem;
+    line-height: 1.96rem;
+}
+
+.header .wrapper {
+    position: absolute;
+    left: calc(50vw - 583px/2);
+    width: 583px;
+    height: 95px;
+    display: flex;
+    align-items: center;
+}
+
+.navigation {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation__item {
+    display: inline-block;
+    a {
+        @include header;
+        text-decoration: none;
+        color: $white;
+        &:hover {
+            font-weight: 500;
+        }
+    }  
+}
+
+.active {
+    border-bottom: 1px solid $white; 
+}
+
+.active a {
+    font-weight: 500; 
+}

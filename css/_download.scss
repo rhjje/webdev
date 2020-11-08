@@ -1,0 +1,93 @@
+$download-bg: #F5F6F7;
+$bold-text: #373737;
+$text: #4E4E4E;
+$white: #FFFFFF;
+$button: #00AFDB;
+$button-hover: #009CC2;
+
+@mixin h2 {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.4rem;
+    line-height: 2.81rem;
+    letter-spacing: 0.1rem; 
+    color: $bold-text; 
+    text-transform: uppercase;
+}
+
+@mixin text {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: $text;
+}
+
+@mixin button {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.4rem;
+    line-height: 1.64rem;
+    color: $white;
+}
+
+.download .wrapper {
+    height: 464px;
+    background-color: $download-bg;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.download__heading {
+    @include h2;
+    margin-top: 120px;
+}
+
+.download__text-content {
+    @include text;
+    width: 480px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.download__buttons {
+    width: 400px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.apple-store, .play-market {
+    position: relative;
+    width: 185px;
+    height: 45px;
+    border: none;
+    outline: none;
+    @include button;
+    text-transform: uppercase;
+    text-align: left;
+    padding-left: 18px;
+    background: linear-gradient(to right, $button 0%, $button 67%, $button-hover 67%, $button-hover 100%);
+    &:hover {
+        cursor: pointer;
+        background: $button-hover;
+    }
+}
+
+.logo-apple, .logo-market {
+    position: absolute;
+    left: 145px;
+    top: 13px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;  
+}
+
+.logo-apple {
+    background: url('../assets/icons/icon-apple.svg') 50% 50% no-repeat;
+}
+
+.logo-market {
+    background: url('../assets/icons/icon-android.svg') 50% 50% no-repeat;
+}

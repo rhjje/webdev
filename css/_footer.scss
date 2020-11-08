@@ -1,0 +1,48 @@
+$black: #000000;
+$white: #FFFFFF;
+$text-created: #818181;
+
+@mixin text {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+.footer .wrapper {
+    height: 185px;
+    background-color: $black;
+}
+
+.column-3 {
+    max-width: 1280px;
+    height: 45px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.footer__navigation {
+    width: 235px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__navigation-item {
+    @include text;
+    color: $white;
+}
+
+.footer__logo {
+    margin-right: 65px;
+}
+
+.created-by {
+    @include text;
+    color: $text-created;
+}
+
