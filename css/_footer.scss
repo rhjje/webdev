@@ -33,8 +33,15 @@ $text-created: #818181;
 }
 
 .footer__navigation-item {
-    @include text;
     color: $white;
+    a {
+        @include text;
+        text-decoration: none;
+        color: $white;
+        &:hover {
+            font-weight: 500;
+        }
+    }
 }
 
 .footer__logo {

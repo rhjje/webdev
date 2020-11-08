@@ -534,11 +534,20 @@
 }
 
 .footer__navigation-item {
+  color: #FFFFFF;
+}
+
+.footer__navigation-item a {
   font-weight: 400;
   font-style: normal;
   font-size: 1.4rem;
   line-height: 2rem;
+  text-decoration: none;
   color: #FFFFFF;
+}
+
+.footer__navigation-item a:hover {
+  font-weight: 500;
 }
 
 .footer__logo {
